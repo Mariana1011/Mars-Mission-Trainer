@@ -119,8 +119,6 @@ These references inform the **concepts**, not every value in the game. The proje
 
 Team ElektroLab used AI assistance during ideation, interface illustration, coding support, and documentation preparation. Human team members selected the design goals, integrated and adapted the Godot project, and reviewed its gameplay. **AI-generated media and source-code contributions should be labeled and credited in accordance with the NASA Space Apps Challenge submission rules.**
 
-**Before final submission:** verify the origin and reuse permissions of all audio files (including `MARS_GAME/eee.ogg`), confirm attribution for third-party fonts/assets, and visibly mark AI-generated images or videos where the event rules require it. Do not describe a track as team-original without confirming its provenance.
-
 ## Team
 
 **ElektroLab** — NASA Space Apps Challenge 2026.
