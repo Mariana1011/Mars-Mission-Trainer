@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://c4hlyodj5arfm"]
+
+[ext_resource type="Script" uid="uid://yo0gjihddxcs" path="res://scenes/game/panels/operations.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+content_margin_left = 17.0
+content_margin_top = 12.0
+content_margin_right = 17.0
+content_margin_bottom = 12.0
+bg_color = Color(0.105, 0.066, 0.21, 0.96)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.972, 0.73, 0.322, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[node name="Panel" type="PanelContainer" unique_id=1148477512]
+offset_right = 1484.0
+offset_bottom = 535.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+script = ExtResource("1")
+
+[node name="Body" type="VBoxContainer" parent="." unique_id=1523063437]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Heading" type="Label" parent="Body" unique_id=1741925522]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.88, 0.53, 1)
+theme_override_font_sizes/font_size = 29
+text = "OPERATIONS  |  CREW AND ROVERS"
+
+[node name="Intro" type="Label" parent="Body" unique_id=78167608]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Assign astronauts, recharge rovers and collect raw Martian data."
+
+[node name="Columns" type="HBoxContainer" parent="Body" unique_id=462119653]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 17
+
+[node name="CrewCol" type="VBoxContainer" parent="Body/Columns" unique_id=928553925]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CrewTitle" type="Label" parent="Body/Columns/CrewCol" unique_id=922961380]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ASTRONAUTS"
+
+[node name="CrewScroll" type="ScrollContainer" parent="Body/Columns/CrewCol" unique_id=1019129228]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+
+[node name="CrewList" type="VBoxContainer" parent="Body/Columns/CrewCol/CrewScroll" unique_id=342739415]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 7
+
+[node name="RoverCol" type="VBoxContainer" parent="Body/Columns" unique_id=78966952]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RoverTitle" type="Label" parent="Body/Columns/RoverCol" unique_id=47835745]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ROVERS"
+
+[node name="RoverScroll" type="ScrollContainer" parent="Body/Columns/RoverCol" unique_id=564366663]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+
+[node name="RoverList" type="VBoxContainer" parent="Body/Columns/RoverCol/RoverScroll" unique_id=1275425501]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 7
+
+[node name="Message" type="Label" parent="Body" unique_id=424907028]
+layout_mode = 2
+text = "Select a workplace, then choose a task inside that module."
+horizontal_alignment = 1

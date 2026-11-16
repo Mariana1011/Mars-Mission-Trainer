@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bbre02qc5sdmp"]
+
+[ext_resource type="Script" uid="uid://vvolkob57qoq" path="res://scenes/game/panels/lab.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+content_margin_left = 17.0
+content_margin_top = 12.0
+content_margin_right = 17.0
+content_margin_bottom = 12.0
+bg_color = Color(0.105, 0.066, 0.21, 0.96)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.972, 0.73, 0.322, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[node name="Panel" type="PanelContainer" unique_id=617720587]
+offset_right = 1484.0
+offset_bottom = 535.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+script = ExtResource("1")
+
+[node name="Body" type="VBoxContainer" parent="." unique_id=1839468941]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Heading" type="Label" parent="Body" unique_id=109008155]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.88, 0.53, 1)
+theme_override_font_sizes/font_size = 29
+text = "LAB  |  SCIENCE"
+
+[node name="Intro" type="Label" parent="Body" unique_id=876151605]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Rovers collect raw data. Crew members or computers process it."
+
+[node name="DataStatus" type="Label" parent="Body" unique_id=1379529271]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Processed: 0 / 150 GB  |  Raw data: 0 GB"
+
+[node name="AutoData" type="CheckButton" parent="Body" unique_id=490450023]
+layout_mode = 2
+text = "Automatic processing (+9 kW, no astronaut required)"
+
+[node name="ManualTitle" type="Label" parent="Body" unique_id=695862346]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "ASSIGNED SCIENTISTS — select a task"
+
+[node name="CrewScroll" type="ScrollContainer" parent="Body" unique_id=1538361272]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+
+[node name="CrewList" type="VBoxContainer" parent="Body/CrewScroll" unique_id=2142567116]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 7
+
+[node name="RepairTitle" type="Label" parent="Body" unique_id=941272504]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "AUTOMATIC ROVER REPAIR (+7 kW)"
+
+[node name="RepairButtons" type="HBoxContainer" parent="Body" unique_id=994803698]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Message" type="Label" parent="Body" unique_id=415829355]
+layout_mode = 2

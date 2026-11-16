@@ -1,0 +1,10 @@
+# Godot 4
+.godot/
+
+# Temporary files
+*.tmp
+*.bak
+
+# Windows
+Thumbs.db
+Desktop.ini

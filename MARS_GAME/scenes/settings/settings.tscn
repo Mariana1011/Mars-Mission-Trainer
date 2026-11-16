@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://c1tbnv34fylp2"]
+
+[ext_resource type="Script" uid="uid://cjkh0uio0u31a" path="res://scenes/settings/settings.gd" id="1_vu5fi"]
+
+[node name="Settings" type="Control" unique_id=23494223]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vu5fi")
+
+[node name="Background" type="Node2D" parent="." unique_id=1689536467]
+position = Vector2(-3, 3)
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=1146167523]
+offset_right = 1155.0
+offset_bottom = 645.0
+color = Color(0.5806767, 0.18229681, 0.2197966, 1)
+
+[node name="Buttons" type="Node2D" parent="Background" unique_id=673866933]
+position = Vector2(3, -3)
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/Buttons" unique_id=1162315998]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/Buttons/MarginContainer" unique_id=1271778082]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/Buttons/MarginContainer/VBoxContainer" unique_id=1236226422]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Background/Buttons/MarginContainer/VBoxContainer" unique_id=1258336262]
+layout_mode = 2
+
+[node name="back_button" type="Button" parent="Background/Buttons/MarginContainer/VBoxContainer/Control" unique_id=101259920]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 325.0
+offset_right = 370.0
+offset_bottom = 470.0
+text = "-"
+
+[node name="up_sound_button" type="Button" parent="Background/Buttons/MarginContainer/VBoxContainer/Control" unique_id=1584964093]
+layout_mode = 0
+offset_left = 791.0
+offset_top = 325.0
+offset_right = 961.0
+offset_bottom = 470.0
+text = "+"
+
+[node name="down_sound_button" type="Button" parent="Background/Buttons/MarginContainer/VBoxContainer/Control" unique_id=668365084]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 120.0
+offset_right = 631.0
+offset_bottom = 195.0
+text = "Back"
+
+[connection signal="pressed" from="Background/Buttons/MarginContainer/VBoxContainer/Control/back_button" to="." method="_on_downSound_pressed"]
+[connection signal="pressed" from="Background/Buttons/MarginContainer/VBoxContainer/Control/up_sound_button" to="." method="_on_upSound_pressed"]
+[connection signal="pressed" from="Background/Buttons/MarginContainer/VBoxContainer/Control/down_sound_button" to="." method="_on_main_menu_pressed"]

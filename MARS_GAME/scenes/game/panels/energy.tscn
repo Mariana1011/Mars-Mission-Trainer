@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://pl2hg2sahqpd"]
+
+[ext_resource type="Script" uid="uid://dt7mcuaj8dep" path="res://scenes/game/panels/energy.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+content_margin_left = 17.0
+content_margin_top = 12.0
+content_margin_right = 17.0
+content_margin_bottom = 12.0
+bg_color = Color(0.105, 0.066, 0.21, 0.96)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.972, 0.73, 0.322, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[node name="Panel" type="PanelContainer" unique_id=873743795]
+offset_right = 1484.0
+offset_bottom = 535.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+script = ExtResource("1")
+
+[node name="Body" type="VBoxContainer" parent="." unique_id=233363069]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Heading" type="Label" parent="Body" unique_id=892287045]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.88, 0.53, 1)
+theme_override_font_sizes/font_size = 29
+text = "ENERGY  |  POWER GRID"
+
+[node name="Intro" type="Label" parent="Body" unique_id=624640208]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Power generation, battery storage, and repair work orders."
+
+[node name="Metrics" type="Label" parent="Body" unique_id=971676950]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Generation: —  |  Demand: —  |  Battery: —"
+
+[node name="Devices" type="Label" parent="Body" unique_id=1979158185]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Reactor / solar / wind status"
+
+[node name="CrewTitle" type="Label" parent="Body" unique_id=75463066]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "ENGINEERS — select a task"
+
+[node name="CrewScroll" type="ScrollContainer" parent="Body" unique_id=313353858]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+
+[node name="CrewList" type="VBoxContainer" parent="Body/CrewScroll" unique_id=886688458]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 7
+
+[node name="Message" type="Label" parent="Body" unique_id=1898511952]
+layout_mode = 2
