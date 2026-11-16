@@ -117,7 +117,7 @@ These references inform the **concepts**, not every value in the game. The proje
 
 ## AI assistance and media credits
 
-Team ElektroLab used AI assistance during ideation, interface illustration, coding support, and documentation preparation. Human team members selected the design goals, integrated and adapted the Godot project, and reviewed its gameplay. **AI-generated media and source-code contributions should be labeled and credited in accordance with the NASA Space Apps Challenge submission rules.**
+Team ElektroLab used AI assistance during ideation, interface illustration, coding support, and documentation preparation. Human team members selected the design goals, integrated and adapted the Godot project, and reviewed its gameplay. 
 
 ## Team
 
